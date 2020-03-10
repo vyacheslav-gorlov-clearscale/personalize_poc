@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PersonalizePOC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/gorloff.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_macOS.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_ubuntu.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +20,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -44,11 +36,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583860900169</updated>
-      <workItem from="1583860901369" duration="451000" />
+      <workItem from="1583860901369" duration="622000" />
     </task>
+    <task id="LOCAL-00001" summary="- init">
+      <created>1583861476398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583861476398</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- init" />
+    <option name="LAST_COMMIT_MESSAGE" value="- init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583861476266">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861476266" />
   </component>
 </project>
