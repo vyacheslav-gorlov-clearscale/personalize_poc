@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,12 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
@@ -36,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583860900169</updated>
-      <workItem from="1583860901369" duration="622000" />
+      <workItem from="1583860901369" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="- init">
       <created>1583861476398</created>
@@ -45,7 +52,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583861476398</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- init">
+      <created>1583861530769</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583861530769</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- init">
+      <created>1583861538085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583861538085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -56,9 +77,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="- init" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583861476266">
+    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583861537981">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861476266" />
+    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861537981" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583861543366">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861543366" />
   </component>
 </project>
