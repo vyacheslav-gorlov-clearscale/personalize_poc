@@ -21,7 +21,7 @@ export class PersonalizePocStack extends cdk.Stack {
     const sageMakerInstance = new CfnNotebookInstance(this, "NotebookInstance", {
       instanceType: "ml.t3.medium",
       roleArn: iamRole.roleArn,
-      notebookInstanceName: "Forecast-POC",
+      notebookInstanceName: "Personalize-POC",
       defaultCodeRepository: "https://github.com/gorlov-clearscale/personalize_poc.git",
       volumeSizeInGb: 20
     });

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
+    <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="- Added notebooks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install_macOS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_macOS.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install_ubuntu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_ubuntu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +17,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YwkAVHeow1ztxSbfdf38IOgg4u" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
@@ -33,6 +40,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Notebooks" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -43,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583860900169</updated>
-      <workItem from="1583860901369" duration="1301000" />
+      <workItem from="1583860901369" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="- init">
       <created>1583861476398</created>
@@ -66,24 +78,43 @@
       <option name="project" value="LOCAL" />
       <updated>1583861538085</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Added notebooks">
+      <created>1583897751736</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583897751736</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/bin/personalize_poc.js" />
+        <option value="$PROJECT_DIR$/bin/personalize_poc.d.ts" />
+        <option value="$PROJECT_DIR$/lib/personalize_poc-stack.js" />
+        <option value="$PROJECT_DIR$/lib/personalize_poc-stack.d.ts" />
+        <option value="$PROJECT_DIR$/test/personalize_poc.test.d.ts" />
+        <option value="$PROJECT_DIR$/test/personalize_poc.test.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- init" />
-    <option name="LAST_COMMIT_MESSAGE" value="- init" />
+    <MESSAGE value="- Added notebooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added notebooks" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583861537981">
+    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583897751594">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861537981" />
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583861543366">
+    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583897751594" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583897769548">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583861543366" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583897769548" />
   </component>
 </project>
