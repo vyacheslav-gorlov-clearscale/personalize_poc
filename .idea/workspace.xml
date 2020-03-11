@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="- Added notebooks">
+    <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_macOS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_macOS.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_ubuntu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_ubuntu.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/personalize_poc-stack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/1. Validating_and_Importing_User_Item_Interaction_Data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/1. Validating_and_Importing_User_Item_Interaction_Data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/2. Creating_and_Evaluating_Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/2. Creating_and_Evaluating_Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/3. Deploying_Campaigns_and_Interacting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/3. Deploying_Campaigns_and_Interacting.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583860900169</updated>
-      <workItem from="1583860901369" duration="1978000" />
+      <workItem from="1583860901369" duration="3717000" />
     </task>
     <task id="LOCAL-00001" summary="- init">
       <created>1583861476398</created>
@@ -85,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583897751736</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Fixed bug with failed stack creation&#10;- Added correct permissions to the scripts">
+      <created>1583898552408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583898552408</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,16 +111,17 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- init" />
     <MESSAGE value="- Added notebooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added notebooks" />
+    <MESSAGE value="- Fixed bug with failed stack creation&#10;- Added correct permissions to the scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed bug with failed stack creation&#10;- Added correct permissions to the scripts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583897751594">
+    <state x="563" y="492" key="CommitChangelistDialog2" timestamp="1583898552281">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583897751594" />
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583897769548">
+    <state x="563" y="492" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583898552281" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583898558335">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583897769548" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583898558335" />
   </component>
 </project>
