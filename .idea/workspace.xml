@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/bin/endpoints_kit.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/cdk.context.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/cdk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/item_based_predictions/predictWithItem.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/predict_with_user/predictWithUser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/put_events/putEvents.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/search_results_reranking/rerankArrayWithUser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/APIGateway.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/endpoints_kit-stack.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/env.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/lambdaPredictWithItem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/lambdaPredictWithUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/lambdaPutEvents.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/lambdaRerankArrayWithUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/lib/personalizeLambdaRole.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/postman_collections/PersonalizePOC.postman_collection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/test/endpoints_kit.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndpointsKit/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gorloff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gorloff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lib/env.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lib/env.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +25,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -85,7 +58,7 @@
       <updated>1583860900169</updated>
       <workItem from="1583860901369" duration="4296000" />
       <workItem from="1584372972277" duration="1376000" />
-      <workItem from="1584425072384" duration="14645000" />
+      <workItem from="1584425072384" duration="16406000" />
     </task>
     <task id="LOCAL-00001" summary="- init">
       <created>1583861476398</created>
@@ -129,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583938750280</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Added EndpointKit">
+      <created>1584451730527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584451730527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,22 +130,25 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- init" />
     <MESSAGE value="- Added notebooks" />
     <MESSAGE value="- Fixed bug with failed stack creation&#10;- Added correct permissions to the scripts" />
     <MESSAGE value="- Added processed notebooks&#10;- Various fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added processed notebooks&#10;- Various fixes" />
+    <MESSAGE value="- Added EndpointKit" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added EndpointKit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="926" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584436900275">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="926" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1584436900275" />
-    <state x="563" y="471" key="CommitChangelistDialog2" timestamp="1583938750153">
+    <state x="563" y="471" key="CommitChangelistDialog2" timestamp="1584451730360">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="563" y="471" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1583938750153" />
+    <state x="563" y="471" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1584451730360" />
     <state width="2560" height="170" key="GridCell.Tab.0.bottom" timestamp="1584436852835">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -182,10 +165,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="2560" height="170" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1584436852835" />
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1583938757641">
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2" timestamp="1584451735006">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1583938757641" />
+    <state x="780" y="762" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1584451735006" />
     <state x="859" y="405" width="840" height="1034" key="search.everywhere.popup" timestamp="1584442058194">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
