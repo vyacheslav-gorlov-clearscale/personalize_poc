@@ -2,6 +2,11 @@
   <dictionary name="gorloff">
     <words>
       <w>amazonaws</w>
+      <w>boto</w>
+      <w>hrnnbaa</w>
+      <w>rerank</w>
+      <w>reranked</w>
+      <w>reranking</w>
       <w>sagemaker</w>
     </words>
   </dictionary>

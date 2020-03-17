@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "fbdbf84c-c877-4eb4-ba57-86683420d3af",
+		"name": "PersonalizePOC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Item-Based Predictions",
+			"item": [
+				{
+					"name": "PredictWithItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"itemId\": 944\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/item_predictions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item_predictions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Search Results Reranking",
+			"item": [
+				{
+					"name": "RerankArrayWithUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 2,\n\t\"items\": [\n\t\t{\"itemId\": 1817},\n\t\t{\"itemId\": 241},\n\t\t{\"itemId\": 236},\n\t\t{\"itemId\": 7991},\n\t\t{\"itemId\": 16188},\n\t\t{\"itemId\": 6820},\n\t\t{\"itemId\": 5020},\n\t\t{\"itemId\": 16030},\n\t\t{\"itemId\": 4321},\n\t\t{\"itemId\": 5159},\n\t\t{\"itemId\": 4304},\n\t\t{\"itemId\": 2308},\n\t\t{\"itemId\": 5240},\n\t\t{\"itemId\": 12526},\n\t\t{\"itemId\": 9701},\n\t\t{\"itemId\": 8996},\n\t\t{\"itemId\": 15677},\n\t\t{\"itemId\": 2776},\n\t\t{\"itemId\": 14268},\n\t\t{\"itemId\": 6826},\n\t\t{\"itemId\": 8520},\n\t\t{\"itemId\": 18414},\n\t\t{\"itemId\": 2808},\n\t\t{\"itemId\": 16439}\t\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/search_results_reranking/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"search_results_reranking",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Real Time Predictions",
+			"item": [
+				{
+					"name": "PutEvents",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 1,\n\t\"sessionId\": \"0F1DD36A-5900-45EC-9DD3-15C964BC8AA1\",\n\t\"events\": [\n\t\t{\n\t\t\t\"sentAt\": 1584445135,\n\t\t\t\"eventType\": \"EVENT_TYPE\",\n\t\t\t\"properties\": \"{\\\"itemId\\\": \\\"11\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"sentAt\": 1584445230,\n\t\t\t\"eventType\": \"EVENT_TYPE\",\n\t\t\t\"properties\": \"{\\\"itemId\\\": \\\"32\\\"}\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/real_time_predictions/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"real_time_predictions",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PredictWithUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/real_time_predictions/predictions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"real_time_predictions",
+								"predictions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed8cae1a-9ad4-485e-8cac-86aade986e7b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "96e9b914-96f3-4424-a7c9-837c8555f7d4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b9077935-742f-4af3-b03c-a47e229ae70c",
+			"key": "url",
+			"value": "@API_GATEWAY_ENDPOINT",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
