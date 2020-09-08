@@ -15,14 +15,18 @@ export class APIGateway extends AmazonAPIGateway.RestApi {
         const itemPredictions = this.root.addResource("item_predictions")
 
         const predictWithItemLambda = new LambdaPredictWithItem(scope)
-        const predictWithItemIntegration = new AmazonAPIGateway.LambdaIntegration(predictWithItemLambda)
+        const predictWithItemIntegration = new AmazonAPIGateway.LambdaIntegration(predictWithItemLambda, {
+            proxy: true
+        })
         itemPredictions.addMethod("POST", predictWithItemIntegration)
 
         // MARK: - Search Results Reranking
         const searchResultsReranking = this.root.addResource("search_results_reranking")
 
         const rerankArrayWithUserLambda = new LambdaRerankArrayWithUser(scope)
-        const rerankArrayWithUserIntegration = new AmazonAPIGateway.LambdaIntegration(rerankArrayWithUserLambda)
+        const rerankArrayWithUserIntegration = new AmazonAPIGateway.LambdaIntegration(rerankArrayWithUserLambda, {
+            proxy: true
+        })
         searchResultsReranking.addMethod("POST", rerankArrayWithUserIntegration)
 
         // MARK: - Real-Time Predictions
@@ -33,12 +37,16 @@ export class APIGateway extends AmazonAPIGateway.RestApi {
             const events = realTimePredictions.addResource("events")
 
             const putEventsLambda = new LambdaPutEvents(scope)
-            const putEventsIntegration = new AmazonAPIGateway.LambdaIntegration(putEventsLambda)
+            const putEventsIntegration = new AmazonAPIGateway.LambdaIntegration(putEventsLambda, {
+                proxy: true
+            })
             events.addMethod("POST", putEventsIntegration)
 
             const predictions = realTimePredictions.addResource("predictions")
             const predictWithUserLambda = new LambdaPredictWithUser(scope)
-            const predictWithUserIntegration = new AmazonAPIGateway.LambdaIntegration(predictWithUserLambda)
+            const predictWithUserIntegration = new AmazonAPIGateway.LambdaIntegration(predictWithUserLambda, {
+                proxy: true
+            })
             predictions.addMethod("POST", predictWithUserIntegration)
         } finally { }
 

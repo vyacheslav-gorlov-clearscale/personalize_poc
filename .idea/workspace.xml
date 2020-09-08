@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80021677-a325-4ab4-8d02-6c9e5db77280" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndpointsKit/lib/env.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lib/env.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lambda_src/item_based_predictions/predictWithItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/item_based_predictions/predictWithItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/predict_with_user/predictWithUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/predict_with_user/predictWithUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/put_events/putEvents.py" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/real_time_predictions/put_events/putEvents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lambda_src/search_results_reranking/rerankArrayWithUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lambda_src/search_results_reranking/rerankArrayWithUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/lib/APIGateway.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/lib/APIGateway.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndpointsKit/postman_collections/make.js" beforeDir="false" afterPath="$PROJECT_DIR$/EndpointsKit/postman_collections/make.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +39,12 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.9.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.6.4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -36,6 +54,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -46,6 +65,7 @@
       <recent name="$PROJECT_DIR$/Notebooks" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -59,6 +79,7 @@
       <workItem from="1583860901369" duration="4296000" />
       <workItem from="1584372972277" duration="1376000" />
       <workItem from="1584425072384" duration="16406000" />
+      <workItem from="1599540222036" duration="1057000" />
     </task>
     <task id="LOCAL-00001" summary="- init">
       <created>1583861476398</created>
@@ -113,21 +134,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/EndpointsKit/test/endpoints_kit.test.d.ts" />
-        <option value="$PROJECT_DIR$/bin/personalize_poc.d.ts" />
-        <option value="$PROJECT_DIR$/EndpointsKit/bin/endpoints_kit.js" />
-        <option value="$PROJECT_DIR$/lib/personalize_poc-stack.d.ts" />
-        <option value="$PROJECT_DIR$/EndpointsKit/bin/endpoints_kit.d.ts" />
-        <option value="$PROJECT_DIR$/test/personalize_poc.test.d.ts" />
-        <option value="$PROJECT_DIR$/EndpointsKit/test/endpoints_kit.test.js" />
-        <option value="$PROJECT_DIR$/test/personalize_poc.test.js" />
-        <option value="$PROJECT_DIR$/lib/personalize_poc-stack.js" />
-        <option value="$PROJECT_DIR$/bin/personalize_poc.js" />
-      </list>
-    </option>
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
