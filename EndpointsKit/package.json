@@ -1,8 +1,8 @@
 {
-  "name": "personalize_poc",
+  "name": "endpoints_kit",
   "version": "0.1.0",
   "bin": {
-    "personalize_poc": "bin/personalize_poc.js"
+    "endpoints_kit": "bin/endpoints_kit.js"
   },
   "scripts": {
     "build": "tsc",
