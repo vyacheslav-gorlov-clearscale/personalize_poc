@@ -31,7 +31,8 @@ export class PersonalizeLambdaPutEvents extends aws_lambda.Function {
             timeout: Duration.minutes(15),
             tracing: aws_lambda.Tracing.ACTIVE,
             layers: [
-                PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
+                PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS),
+                PersonalizeLambdaLayersFactory.sharedInstance.getCustomLayerWithName("mark_test_layer", PersonalizeLambdaBundlingOptions.PYTHON_LAYER)
             ]
         })
     }
