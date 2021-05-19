@@ -12,7 +12,8 @@ export class PersonalizeLambdaRole extends aws_iam.Role {
             managedPolicies: [
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName("service-role/AWSLambdaBasicExecutionRole"),
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName("service-role/AmazonPersonalizeFullAccess"),
-                aws_iam.ManagedPolicy.fromAwsManagedPolicyName("AWSXrayFullAccess")
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName("AWSXrayFullAccess"),
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('CloudWatchLambdaInsightsExecutionRolePolicy')
             ]
         })
 

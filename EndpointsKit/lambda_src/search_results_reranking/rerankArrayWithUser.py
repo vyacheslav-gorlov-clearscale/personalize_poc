@@ -2,14 +2,18 @@ import os, json
 import boto3
 import pandas
 from aws_lambda_powertools import Tracer
-tracer = Tracer(service=__name__)
+TRACER = Tracer(service=__name__)
+LOGGER = Logger()
+METRICS = Metrics()
 
 
 personalize_runtime = boto3.client('personalize-runtime')
 rerank_campaign_arn = os.environ["PERSONALIZE_RERANK_CAMPAIGN_ARN"]
 
 
-@tracer.capture_lambda_handler
+@TRACER.capture_lambda_handler
+@LOGGER.inject_lambda_context
+@METRICS.log_metrics
 def lambda_handler(event, context):
     try:
         body = json.loads(event["body"])

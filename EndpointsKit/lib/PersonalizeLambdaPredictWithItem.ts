@@ -1,11 +1,12 @@
 import { Duration, aws_lambda } from "aws-cdk-lib"
 import { Construct } from "constructs"
 
-import { PersonalizeLambdaRole } from "./personalizeLambdaRole"
-import { PersonalizeBundlingOptions } from "./personalizeBundingOptions"
+import { PersonalizeLambdaRole } from "./PersonalizeLambdaRole"
+import { PersonalizeBundlingOptions } from "./PersonalizeLambdaBundingOptions"
+import { PersonalizeLambdaEnhancedMonitoringLayer } from "./PersonalizeLambdaEnhancedMonitoringLayer"
 
 
-export class LambdaPredictWithItem extends aws_lambda.Function {
+export class PersonalizeLambdaPredictWithItem extends aws_lambda.Function {
 
     constructor(scope: Construct) {
 
@@ -25,7 +26,10 @@ export class LambdaPredictWithItem extends aws_lambda.Function {
             },
             memorySize: 256,
             timeout: Duration.minutes(3),
-            tracing: aws_lambda.Tracing.ACTIVE
+            tracing: aws_lambda.Tracing.ACTIVE,
+            layers: [
+                PersonalizeLambdaEnhancedMonitoringLayer.fromScope(scope)
+            ]
         })
 
     }

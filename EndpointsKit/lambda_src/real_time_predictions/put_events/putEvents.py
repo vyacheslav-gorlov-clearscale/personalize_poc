@@ -1,7 +1,9 @@
 import os, json
 import boto3
 from aws_lambda_powertools import Tracer
-tracer = Tracer(service=__name__)
+TRACER = Tracer(service=__name__)
+LOGGER = Logger()
+METRICS = Metrics()
 
 
 personalize_events = boto3.client(service_name='personalize-events')
@@ -9,7 +11,9 @@ event_tracker_arn = os.environ["EVENT_TRACKER_ARN"]
 tracking_id       = os.environ["TRACKING_ID"]
 
 
-@tracer.capture_lambda_handler
+@TRACER.capture_lambda_handler
+@LOGGER.inject_lambda_context
+@METRICS.log_metrics
 def lambda_handler(event, context):
     try:
         body = json.loads(event["body"])

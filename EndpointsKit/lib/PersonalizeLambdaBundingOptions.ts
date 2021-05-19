@@ -20,7 +20,7 @@ export class PersonalizeBundlingOptions implements BundlingOptions {
         [
             "bash", "-c", [
             `pip install -r requirements.txt -t /asset-output`,
-            `cp -r /asset-input/* /asset-output`
+            `cp -au . /asset-output`
             ].join(" && ")
         ],
         "root"

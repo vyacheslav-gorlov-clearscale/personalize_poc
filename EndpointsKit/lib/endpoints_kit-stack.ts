@@ -2,7 +2,7 @@ import * as fs from "fs"
 import * as path from "path"
 import { Construct } from "constructs"
 import { Stack, StackProps } from "aws-cdk-lib"
-import { APIGateway } from "./APIGateway"
+import { PersonalizeAPIGateway } from "./PersonalizeAPIGateway"
 
 
 export class EndpointsKitStack extends Stack {
@@ -18,7 +18,7 @@ export class EndpointsKitStack extends Stack {
 
     super(scope, id, props)
 
-    new APIGateway(this)
+    new PersonalizeAPIGateway(this)
 
   }
 
