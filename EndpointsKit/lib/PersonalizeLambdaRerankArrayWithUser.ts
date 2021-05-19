@@ -20,7 +20,7 @@ export class PersonalizeLambdaRerankArrayWithUser extends aws_lambda.Function {
             role: lambdaRole,
             handler: `RerankArrayWithUser.lambda_handler`,
             code: aws_lambda.Code.fromAsset("lambda_src/search_results_reranking", {
-                bundling: PersonalizeLambdaBundlingOptions.PYTHON
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON_FUNCTION
             }),
             environment: {
                 "PERSONALIZE_RERANK_CAMPAIGN_ARN": personalizeRerankCampaignArn
@@ -30,7 +30,7 @@ export class PersonalizeLambdaRerankArrayWithUser extends aws_lambda.Function {
             tracing: aws_lambda.Tracing.ACTIVE,
             layers: [
                 PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS),
-                PersonalizeLambdaLayersFactory.sharedInstance.getCustomLayerWithName("mark_test_layer", PersonalizeLambdaBundlingOptions.PYTHON)
+                PersonalizeLambdaLayersFactory.sharedInstance.getCustomLayerWithName("mark_test_layer", PersonalizeLambdaBundlingOptions.PYTHON_LAYER)
             ]
         })
 

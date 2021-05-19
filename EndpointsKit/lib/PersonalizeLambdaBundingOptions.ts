@@ -15,11 +15,22 @@ export class PersonalizeLambdaBundlingOptions implements BundlingOptions {
         this.user = user
     }
 
-    static PYTHON = new PersonalizeLambdaBundlingOptions(
+    static PYTHON_FUNCTION = new PersonalizeLambdaBundlingOptions(
         aws_lambda.Runtime.PYTHON_3_8.bundlingImage,
         [
             "bash", "-c", [
-            `pip install -r requirements.txt -t /asset-output`,
+            `pip install -r requirements.txt -t /asset-output/`,
+            `cp -au . /asset-output`
+            ].join(" && ")
+        ],
+        "root"
+    )
+
+    static PYTHON_LAYER = new PersonalizeLambdaBundlingOptions(
+        aws_lambda.Runtime.PYTHON_3_8.bundlingImage,
+        [
+            "bash", "-c", [
+            `pip install -r requirements.txt -t /asset-output/python`,
             `cp -au . /asset-output`
             ].join(" && ")
         ],

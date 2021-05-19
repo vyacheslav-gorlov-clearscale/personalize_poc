@@ -21,7 +21,7 @@ export class PersonalizeLambdaPutEvents extends aws_lambda.Function {
             handler: "PutEvents.lambda_handler",
             role: lambdaRole,
             code: aws_lambda.Code.fromAsset("lambda_src/real_time_predictions/put_events", {
-                bundling: PersonalizeLambdaBundlingOptions.PYTHON
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON_FUNCTION
             }),
             environment: {
                 "EVENT_TRACKER_ARN": eventTrackerArn,

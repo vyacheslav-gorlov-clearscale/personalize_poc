@@ -19,7 +19,7 @@ export class PersonalizeLambdaPredictWithItem extends aws_lambda.Function {
             runtime: aws_lambda.Runtime.PYTHON_3_8,
             handler: "PredictWithItem.lambda_handler",
             code: aws_lambda.Code.fromAsset("lambda_src/item_based_predictions", {
-                bundling: PersonalizeLambdaBundlingOptions.PYTHON
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON_FUNCTION
             }),
             role: lambdaRole,
             environment: {
