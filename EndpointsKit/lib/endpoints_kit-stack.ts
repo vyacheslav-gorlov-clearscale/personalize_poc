@@ -3,6 +3,7 @@ import * as path from "path"
 import { Construct } from "constructs"
 import { Stack, StackProps } from "aws-cdk-lib"
 import { PersonalizeAPIGateway } from "./PersonalizeAPIGateway"
+import { PersonalizeLambdaLayersFactory } from "./PersonalizeLambdaLayersFactory"
 
 
 export class EndpointsKitStack extends Stack {
@@ -17,6 +18,9 @@ export class EndpointsKitStack extends Stack {
     process.env["PERSONALIZE_REALTIME_CAMPAIGN_ARN"] = envDictionary["personalizeRealtimeCampaignArn"]
 
     super(scope, id, props)
+
+    // Hello, Objective-C
+    PersonalizeLambdaLayersFactory.loadWithScope(this)
 
     new PersonalizeAPIGateway(this)
 

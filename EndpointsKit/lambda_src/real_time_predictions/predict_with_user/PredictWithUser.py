@@ -1,6 +1,6 @@
 import os, json
 import boto3
-from aws_lambda_powertools import Tracer
+from aws_lambda_powertools import Tracer, Logger, Metrics
 TRACER = Tracer(service=__name__)
 LOGGER = Logger()
 METRICS = Metrics()

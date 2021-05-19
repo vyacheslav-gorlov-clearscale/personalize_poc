@@ -1,14 +1,14 @@
 import os, json
 import boto3
-from aws_lambda_powertools import Tracer
+import pandas
+from aws_lambda_powertools import Tracer, Logger, Metrics
 TRACER = Tracer(service=__name__)
 LOGGER = Logger()
 METRICS = Metrics()
 
 
-personalize_events = boto3.client(service_name='personalize-events')
-event_tracker_arn = os.environ["EVENT_TRACKER_ARN"]
-tracking_id       = os.environ["TRACKING_ID"]
+personalize_runtime = boto3.client('personalize-runtime')
+rerank_campaign_arn = os.environ["PERSONALIZE_RERANK_CAMPAIGN_ARN"]
 
 
 @TRACER.capture_lambda_handler
@@ -17,23 +17,21 @@ tracking_id       = os.environ["TRACKING_ID"]
 def lambda_handler(event, context):
     try:
         body = json.loads(event["body"])
-        events = body["events"]
-
         user_id = body["userId"]
-        session_id = body["sessionId"]
+        item_list = body["items"]
+        item_list_to_be_reranked = list(map(lambda item: str(item["itemId"]), item_list))
 
-        put_events_response = personalize_events.put_events(
-            trackingId = tracking_id,
-            userId     = str(user_id),
-            sessionId  = session_id,
-            eventList  = events
+        get_recommendations_response_rerank = personalize_runtime.get_personalized_ranking(
+            campaignArn = rerank_campaign_arn,
+            userId = str(user_id),
+            inputList = item_list_to_be_reranked
         )
 
         response = {
             "isBase64Encoded": False,
             "statusCode": 200,
             "headers": { },
-            "body": json.dumps({"underlyingPersonalizeResponse": put_events_response})
+            "body": json.dumps(get_recommendations_response_rerank)
         }
 
         return response

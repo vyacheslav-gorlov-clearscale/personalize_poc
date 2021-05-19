@@ -1,13 +1,14 @@
 import os, json
 import boto3
-from aws_lambda_powertools import Tracer
+from aws_lambda_powertools import Tracer, Logger, Metrics
 TRACER = Tracer(service=__name__)
 LOGGER = Logger()
 METRICS = Metrics()
 
 
-personalize_runtime = boto3.client('personalize-runtime')
-campaign_arn = os.environ["PERSONALIZE_CAMPAIGN_ARN"]
+personalize_events = boto3.client(service_name='personalize-events')
+event_tracker_arn = os.environ["EVENT_TRACKER_ARN"]
+tracking_id       = os.environ["TRACKING_ID"]
 
 
 @TRACER.capture_lambda_handler
@@ -16,18 +17,23 @@ campaign_arn = os.environ["PERSONALIZE_CAMPAIGN_ARN"]
 def lambda_handler(event, context):
     try:
         body = json.loads(event["body"])
-        item_id = body["itemId"]
+        events = body["events"]
 
-        get_recommendations_response = personalize_runtime.get_recommendations(
-            campaignArn = campaign_arn,
-            itemId = str(item_id),
+        user_id = body["userId"]
+        session_id = body["sessionId"]
+
+        put_events_response = personalize_events.put_events(
+            trackingId = tracking_id,
+            userId     = str(user_id),
+            sessionId  = session_id,
+            eventList  = events
         )
 
         response = {
             "isBase64Encoded": False,
             "statusCode": 200,
             "headers": { },
-            "body": json.dumps(get_recommendations_response)
+            "body": json.dumps({"underlyingPersonalizeResponse": put_events_response})
         }
 
         return response
