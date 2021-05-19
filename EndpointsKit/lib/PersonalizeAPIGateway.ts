@@ -1,10 +1,12 @@
 import { aws_apigateway } from "aws-cdk-lib"
 import { Construct } from 'constructs'
 
+
 import { PersonalizeLambdaPredictWithItem } from "./PersonalizeLambdaPredictWithItem"
 import { PersonalizeLambdaRerankArrayWithUser } from "./PersonalizeLambdaRerankArrayWithUser"
 import { PersonalizeLambdaPutEvents } from "./PersonalizeLambdaPutEvents"
 import { PersonalizeLambdaPredictWithUser } from "./PersonalizeLambdaPredictWithUser"
+
 
 export class PersonalizeAPIGateway extends aws_apigateway.RestApi {
 

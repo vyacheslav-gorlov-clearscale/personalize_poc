@@ -1,6 +1,7 @@
 import {aws_lambda, Duration} from "aws-cdk-lib"
 import {Construct} from "constructs"
 
+
 import {PersonalizeLambdaRole} from "./PersonalizeLambdaRole"
 import {PersonalizeBundlingOptions} from "./PersonalizeLambdaBundingOptions"
 import { LambdaLayerType, PersonalizeLambdaLayersFactory } from "./PersonalizeLambdaLayersFactory"
