@@ -1,7 +1,7 @@
 import { aws_lambda, BundlingOptions, DockerImage } from "aws-cdk-lib"
 
 
-export class PersonalizeBundlingOptions implements BundlingOptions {
+export class PersonalizeLambdaBundlingOptions implements BundlingOptions {
 
     // Specify Docker image:
     image: DockerImage
@@ -15,7 +15,7 @@ export class PersonalizeBundlingOptions implements BundlingOptions {
         this.user = user
     }
 
-    static Python = new PersonalizeBundlingOptions(
+    static PYTHON = new PersonalizeLambdaBundlingOptions(
         aws_lambda.Runtime.PYTHON_3_8.bundlingImage,
         [
             "bash", "-c", [

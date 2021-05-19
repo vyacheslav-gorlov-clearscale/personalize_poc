@@ -1,5 +1,5 @@
 import { aws_iam } from "aws-cdk-lib"
-import { Construct } from 'constructs'
+import { Construct } from "constructs"
 
 
 export class PersonalizeLambdaRole extends aws_iam.Role {
@@ -13,7 +13,7 @@ export class PersonalizeLambdaRole extends aws_iam.Role {
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName("service-role/AWSLambdaBasicExecutionRole"),
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName("service-role/AmazonPersonalizeFullAccess"),
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName("AWSXrayFullAccess"),
-                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('CloudWatchLambdaInsightsExecutionRolePolicy')
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName("CloudWatchLambdaInsightsExecutionRolePolicy")
             ]
         })
 

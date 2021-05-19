@@ -2,7 +2,7 @@ import { Duration, aws_lambda } from "aws-cdk-lib"
 import { Construct } from "constructs"
 
 
-import { PersonalizeBundlingOptions } from "./PersonalizeLambdaBundingOptions"
+import { PersonalizeLambdaBundlingOptions } from "./PersonalizeLambdaBundingOptions"
 import { PersonalizeLambdaRole } from "./PersonalizeLambdaRole"
 import { LambdaLayerType, PersonalizeLambdaLayersFactory } from "./PersonalizeLambdaLayersFactory"
 
@@ -21,7 +21,7 @@ export class PersonalizeLambdaPutEvents extends aws_lambda.Function {
             handler: "PutEvents.lambda_handler",
             role: lambdaRole,
             code: aws_lambda.Code.fromAsset("lambda_src/real_time_predictions/put_events", {
-                bundling: PersonalizeBundlingOptions.Python
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON
             }),
             environment: {
                 "EVENT_TRACKER_ARN": eventTrackerArn,
@@ -31,7 +31,7 @@ export class PersonalizeLambdaPutEvents extends aws_lambda.Function {
             timeout: Duration.minutes(15),
             tracing: aws_lambda.Tracing.ACTIVE,
             layers: [
-                PersonalizeLambdaLayersFactory.sharedInstance.getLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
+                PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
             ]
         })
     }

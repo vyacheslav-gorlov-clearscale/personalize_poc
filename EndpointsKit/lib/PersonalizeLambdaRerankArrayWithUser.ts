@@ -1,10 +1,10 @@
-import { Duration, aws_lambda } from "aws-cdk-lib"
-import { Construct } from 'constructs'
+import {aws_lambda, Duration} from "aws-cdk-lib"
+import {Construct} from 'constructs'
 
 
-import { PersonalizeLambdaRole } from "./PersonalizeLambdaRole"
-import { PersonalizeBundlingOptions } from "./PersonalizeLambdaBundingOptions"
-import { LambdaLayerType, PersonalizeLambdaLayersFactory } from "./PersonalizeLambdaLayersFactory";
+import {PersonalizeLambdaRole} from "./PersonalizeLambdaRole"
+import {PersonalizeLambdaBundlingOptions} from "./PersonalizeLambdaBundingOptions"
+import {LambdaLayerType, PersonalizeLambdaLayersFactory} from "./PersonalizeLambdaLayersFactory";
 
 
 export class PersonalizeLambdaRerankArrayWithUser extends aws_lambda.Function {
@@ -20,7 +20,7 @@ export class PersonalizeLambdaRerankArrayWithUser extends aws_lambda.Function {
             role: lambdaRole,
             handler: `RerankArrayWithUser.lambda_handler`,
             code: aws_lambda.Code.fromAsset("lambda_src/search_results_reranking", {
-                bundling: PersonalizeBundlingOptions.Python
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON
             }),
             environment: {
                 "PERSONALIZE_RERANK_CAMPAIGN_ARN": personalizeRerankCampaignArn
@@ -29,7 +29,8 @@ export class PersonalizeLambdaRerankArrayWithUser extends aws_lambda.Function {
             timeout: Duration.minutes(15),
             tracing: aws_lambda.Tracing.ACTIVE,
             layers: [
-                PersonalizeLambdaLayersFactory.sharedInstance.getLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
+                PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS),
+                PersonalizeLambdaLayersFactory.sharedInstance.getCustomLayerWithName("mark_test_layer", PersonalizeLambdaBundlingOptions.PYTHON)
             ]
         })
 

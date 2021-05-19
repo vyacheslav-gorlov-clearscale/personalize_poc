@@ -3,7 +3,7 @@ import {Construct} from "constructs"
 
 
 import {PersonalizeLambdaRole} from "./PersonalizeLambdaRole"
-import {PersonalizeBundlingOptions} from "./PersonalizeLambdaBundingOptions"
+import {PersonalizeLambdaBundlingOptions} from "./PersonalizeLambdaBundingOptions"
 import { LambdaLayerType, PersonalizeLambdaLayersFactory } from "./PersonalizeLambdaLayersFactory"
 
 
@@ -19,7 +19,7 @@ export class PersonalizeLambdaPredictWithItem extends aws_lambda.Function {
             runtime: aws_lambda.Runtime.PYTHON_3_8,
             handler: "PredictWithItem.lambda_handler",
             code: aws_lambda.Code.fromAsset("lambda_src/item_based_predictions", {
-                bundling: PersonalizeBundlingOptions.Python
+                bundling: PersonalizeLambdaBundlingOptions.PYTHON
             }),
             role: lambdaRole,
             environment: {
@@ -29,7 +29,7 @@ export class PersonalizeLambdaPredictWithItem extends aws_lambda.Function {
             timeout: Duration.minutes(3),
             tracing: aws_lambda.Tracing.ACTIVE,
             layers: [
-                PersonalizeLambdaLayersFactory.sharedInstance.getLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
+                PersonalizeLambdaLayersFactory.sharedInstance.getManagedLayerWithType(LambdaLayerType.LAMBDA_INSIGHTS)
             ]
         })
 
