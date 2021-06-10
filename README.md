@@ -14,6 +14,7 @@ Depending on your OS, run:
 ```shell script
 ./deploy.sh
 ```
+After training the models in the deployed Notebook, proceed to `./EndpointsKit/README.md` and follow its instructions
 
 ## Attribution
 
