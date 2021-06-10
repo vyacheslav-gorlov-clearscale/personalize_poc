@@ -11,10 +11,12 @@ Depending on your OS, run:
 
 ## Deploy
 
+- First, run the script:
 ```shell script
 ./deploy.sh
 ```
-After training the models in the deployed Notebook, proceed to `./EndpointsKit/README.md` and follow its instructions
+- Open the deployed Amazon SageMaker Notebook in AWS Console and navigate to `Notebooks`directory, where you need to run files one-by-one to prepare the ML models.
+- Next, proceed to `./EndpointsKit/README.md` and follow its instructions
 
 ## Attribution
 
