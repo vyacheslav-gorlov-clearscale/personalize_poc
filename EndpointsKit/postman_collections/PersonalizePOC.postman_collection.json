@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"itemId\": 944\n}",
+							"raw": "{\n\t\"itemId\": 7\n}",
 							"options": {
 								"raw": {
 									"language": "json"
